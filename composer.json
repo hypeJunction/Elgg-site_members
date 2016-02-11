@@ -1,6 +1,6 @@
 {
 	"name": "hypejunction/site_members",
-	"version": "1.0.3",
+	"version": "1.0.0",
 	"type": "elgg-plugin",
 	"description": "Improved members pages for Elgg",
 	"homepage": "http://hypejunction.com",
