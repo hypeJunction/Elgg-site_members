@@ -6,7 +6,7 @@ Member Directory for Elgg
 
  * Improves UI/UX of members pages
 
-![Members](https://raw.github.com/hypeJunction/Elgg-site_members/master/screenshots/members.png "Members Page")
+![Members](https://raw.github.com/hypeJunction/Elgg-hypeDirectory/master/screenshots/members.png "Members Page")
 
 
 
