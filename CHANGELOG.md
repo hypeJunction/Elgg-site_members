@@ -1,3 +1,13 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/hypeJunction/hypeDirectory/compare/1.0.2...v1.0.3) (2016-09-16)
+
+
+### Bug Fixes
+
+* **releases:** fix release info ([3add61c](https://github.com/hypeJunction/hypeDirectory/commit/3add61c))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/hypeJunction/Elgg-hypeDirectory/compare/1.0.1...v1.0.2) (2016-09-16)
 
