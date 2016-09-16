@@ -33,9 +33,4 @@
 		<name>site_members</name>
 	</provides>
 
-	<provides>
-		<type>plugin</type>
-		<name>user_friends</name>
-	</provides>
-
 </plugin_manifest>
