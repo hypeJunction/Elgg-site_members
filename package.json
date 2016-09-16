@@ -4,9 +4,9 @@
 	"license": "GPL-2.0",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:hypeJunction/Elgg-hypeDirectory.git",
+		"url": "git@github.com:hypeJunction/hypeDirectory.git",
 		"owner": "hypeJunction",
-		"repo": "Elgg-hypeDirectory"
+		"repo": "hypeDirectory"
 	},
 	"devDependencies": {
 		"curlrequest": "^0.3.10",
