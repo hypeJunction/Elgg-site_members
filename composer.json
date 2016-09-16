@@ -1,5 +1,5 @@
 {
-	"name": "hypejunction/site_members",
+	"name": "hypejunction/hypedirectory",
 	"version": "1.0.0",
 	"type": "elgg-plugin",
 	"description": "Improved members pages for Elgg",
@@ -7,6 +7,9 @@
 	"keywords": [
 		"elgg", "plugin", "members"
 	],
+	"extra": {
+		"installer-name": "hypeDirectory"
+	},
 	"license": "GPL-2.0",
 	"authors": [
 		{
@@ -17,6 +20,11 @@
 	"require": {
 		"php": ">=5.5",
 		"composer/installers": "~1.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"hypeJunction/": "classes/hypeJunction/"
+		}
 	}
 }
 

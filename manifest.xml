@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
 
-	<name>Members Directory</name>
-	<id>site_members</id>
+	<name>hypeDirectory</name>
+	<id>hypeDirectory</id>
 
-	<description>Improves UI/UX of members pages</description>
+	<description>User and friends directory</description>
 	<category>notifications</category>
-	<version type="dist">1.0.0</version>
+	<version type="dist">0.0.0</version>
 
 	<author>Ismayil Khayredinov (inof@hypejunction.com)</author>
 	<website>http://www.hypejunction.com/</website>
-	<copyright>(c) 2015 Ismayil Khayredinov</copyright>
+	<copyright>(c) 2015-2016 Ismayil Khayredinov</copyright>
 	<license>GNU General Public License version 2</license>
 
 	<requires>
 		<type>elgg_release</type>
-		<version>2.0</version>
+		<version>2.2</version>
 	</requires>
 
 	<requires>
@@ -23,14 +23,19 @@
 		<name>members</name>
 	</requires>
 	
-	<suggests>
+	<requires>
 		<type>plugin</type>
-		<name>user_sort</name>
-	</suggests>
+		<name>hypeLists</name>
+	</requires>
 
-	<suggests>
+	<provides>
+		<type>plugin</type>
+		<name>site_members</name>
+	</provides>
+
+	<provides>
 		<type>plugin</type>
 		<name>user_friends</name>
-	</suggests>
+	</provides>
 
 </plugin_manifest>

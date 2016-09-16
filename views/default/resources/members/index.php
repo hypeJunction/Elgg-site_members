@@ -1,21 +1,33 @@
 <?php
 
-$page = elgg_extract('page', $vars);
-if (!$page || in_array($page, array('newest', 'alpha', 'popular', 'online'))) {
-	$page = 'all';
+if (elgg_get_plugin_setting('disable_public_access', 'hypeDirectory')) {
+	elgg_gatekeeper();
 }
 
-if (elgg_view_exists("resources/members/$page")) {
-	echo elgg_view_resource("resources/members/$page", $vars);
-	return;
+$tabs = \hypeJunction\Directory\Menus::getTabs();
+if (empty($tabs)) {
+	forward('', '404');
 }
 
-$title = elgg_echo("members:title:{$page}");
+$selected = elgg_extract('page', $vars);
+if (!$selected || !array_key_exists($selected, $tabs)) {
+	$selected = array_values($tabs)[0]['name'];
+}
 
-$content = elgg_view('lists/members', array(
-	'filter_context' => $page,
-		));
-if (!$content) {
+$params = array(
+	'selected' => $selected,
+	'options' => array(
+		'type' => 'user',
+		'full_view' => false,
+		'no_results' => elgg_echo('members:no_results'),
+		'item_view' => get_input('query') ? 'search/entity' : '',
+		'base_url' => current_page_url(),
+		'list_id' => "members-$selected",
+	),
+);
+
+$content = elgg_trigger_plugin_hook('members:list', $selected, $params, null);
+if ($content === null) {
 	forward('', '404');
 }
 
@@ -24,19 +36,17 @@ if (elgg_is_xhr()) {
 	return;
 }
 
-$filter = elgg_view('filters/members', array(
-	'filter_context' => $page,
-		));
+$title = elgg_echo("members:title:$selected");
 
-$params = array(
+$body = elgg_view_layout('content', [
 	'content' => $content,
 	'title' => $title,
-	'filter' => $filter,
-	'sidebar' => elgg_view('sidebars/members', array(
-		'filter_context' => $page,
-	)),
-);
-
-$body = elgg_view_layout('content', $params);
+	'filter' => elgg_view('members/filter', [
+		'filter_context' => $selected,
+	]),
+	'sidebar' => elgg_view('members/sidebar', [
+		'filter_context' => $selected,
+	]),
+]);
 
 echo elgg_view_page($title, $body);

@@ -2,9 +2,13 @@
 
 $filter_context = elgg_extract('filter_context', $vars);
 
-$tabs = elgg_trigger_plugin_hook('members:config', 'tabs', null, array());
+$tabs = \hypeJunction\Directory\Menus::getTabs($filter_context);
+
+if (sizeof($tabs) <= 1) {
+	return;
+}
+
 foreach ($tabs as $tab) {
-	$tab['selected'] = $tab['name'] == $filter_context;
 	elgg_register_menu_item('filter', $tab);
 }
 
