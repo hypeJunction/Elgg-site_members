@@ -6,7 +6,7 @@
 
 	<description>User and friends directory</description>
 	<category>notifications</category>
-	<version type="dist">0.0.0</version>
+	<version type="dist">1.0.0</version>
 
 	<author>Ismayil Khayredinov (inof@hypejunction.com)</author>
 	<website>http://www.hypejunction.com/</website>
@@ -30,7 +30,7 @@
 
 	<provides>
 		<type>plugin</type>
-		<name>site_members</name>
+		<name>hypeDirectory</name>
 	</provides>
 
 </plugin_manifest>

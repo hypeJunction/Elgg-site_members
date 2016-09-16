@@ -1,12 +1,12 @@
 {
-	"name": "site_members",
+	"name": "hypeDirectory",
 	"version": "1.0.0",
 	"license": "GPL-2.0",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:hypeJunction/Elgg-site_members.git",
+		"url": "git@github.com:hypeJunction/Elgg-hypeDirectory.git",
 		"owner": "hypeJunction",
-		"repo": "Elgg-site_members"
+		"repo": "Elgg-hypeDirectory"
 	},
 	"devDependencies": {
 		"curlrequest": "^0.3.10",
